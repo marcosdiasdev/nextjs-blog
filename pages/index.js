@@ -37,6 +37,19 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>API</h2>
+        <ul className={utilStyles.list}>
+          {allPostsData.map(({ id }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/api/posts/${id}`}>
+                <a>{`/api/posts/${id}`}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </Layout>
   );
 }
