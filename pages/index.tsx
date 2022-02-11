@@ -4,7 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
-import { GetStaticProps } from "next/types";
+import { GetStaticProps, GetStaticPropsResult } from "next/types";
 
 export default function Home({
   allPostsData,
@@ -46,7 +46,6 @@ export default function Home({
           ))}
         </ul>
       </section>
-
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>API</h2>
         <ul className={utilStyles.list}>
@@ -58,6 +57,13 @@ export default function Home({
             </li>
           ))}
         </ul>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <p style={{ textAlign: "center" }}>
+          <Link href={`/contact`}>
+            <a>📧</a>
+          </Link>
+        </p>
       </section>
     </Layout>
   );
