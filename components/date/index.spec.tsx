@@ -9,4 +9,9 @@ describe("Date", () => {
     render(<DateComponent dateString={dateString} />);
     expect(screen.getByText(formattedDate)).toBeInTheDocument();
   });
+
+  it("should not render if format is invalid", () => {
+    const dateString = "11-02-2022";
+    expect(() => render(<DateComponent dateString={dateString} />)).toThrow();
+  });
 });
