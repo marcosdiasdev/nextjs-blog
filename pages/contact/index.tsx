@@ -14,7 +14,7 @@ export default function Contact() {
           learning Next.js now.
         </p>
         <p>
-          Let's talk on{" "}
+          Mail me on{" "}
           <a href="mailto=ti.marcosdias@gmail.com"> ti.marcosdias@gmail.com</a>.
         </p>
       </section>
